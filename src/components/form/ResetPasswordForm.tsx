@@ -17,7 +17,7 @@ import { RegisterSchema } from "@/schema/authSchema";
 
 type FormData = z.infer<typeof RegisterSchema>;
 
-const RegisterForm = () => {
+const ResetPasswordForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const router = useRouter()
@@ -48,47 +48,10 @@ const RegisterForm = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="w-3/4 space-y-2"
+        className="w-2/3 space-y-3 mb-2"
       >
-        <FormField
-          control={form.control}
-          name="name"
-          render={({ field }) => (
-            <FormItem className="flex flex-col justify-center items-start relative mb-4">
-              <FormLabel className="relative top-1 mr-10">
-                Name
-              </FormLabel>
-              <FormControl>
-                <Input
-                  placeholder=""
-                  {...field}
-                  autoComplete="off"
-                />
-              </FormControl>
-              <FormMessage className="absolute -bottom-4 left-0 text-[8px]"/>
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem className="flex flex-col justify-center items-start relative">
-              <FormLabel className="relative top-1 mr-10">
-                Email
-              </FormLabel>
-              <FormControl>
-                <Input
-                  placeholder=""
-                  {...field}
-                  autoComplete="off"
-                />
-              </FormControl>
-              <FormMessage className="absolute -bottom-4 left-0 text-[8px]"/>
-            </FormItem>
-          )}
-        />
-        <div className="relative">
+
+<div className="relative">
           <FormField
             control={form.control}
             name="password"
@@ -170,13 +133,14 @@ const RegisterForm = () => {
             />
           )}
         </div>
-        {/* <div className="h-12"/> */}
+
+
         <Button type="submit" className="w-full">
-          Register
+          Submit
         </Button>
       </form>
     </Form>
   )
 }
 
-export default RegisterForm
+export default ResetPasswordForm

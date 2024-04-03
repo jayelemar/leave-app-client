@@ -8,3 +8,10 @@ export interface User {
 export interface NavProps {
   containerStyles: string,
 }
+
+export interface InfoBoxProps {
+  bgColor: string,
+  title: string,
+  count: number,
+  icon: any
+}
