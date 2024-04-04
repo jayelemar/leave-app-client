@@ -14,9 +14,9 @@ const UserSelectRole = () => {
         <SelectValue placeholder="Change Role" />
       </SelectTrigger>
       <SelectContent>
-        <SelectItem value="light">Light</SelectItem>
-        <SelectItem value="dark">Dark</SelectItem>
-        <SelectItem value="system">System</SelectItem>
+        <SelectItem value="admin">Admin</SelectItem>
+        <SelectItem value="manager">Sub Admin</SelectItem>
+        <SelectItem value="employee">Staff</SelectItem>
       </SelectContent>
     </Select>
 
